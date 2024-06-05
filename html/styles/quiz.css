@@ -15,6 +15,7 @@
 .answer {
   width: 100%;
   height: 58px;
+  background: var(--questionBG);
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -26,17 +27,18 @@
   background: hsla(229, 20%, 57%, 0.253);
 }
 .answer input {
-  margin-top: 5px;
+  margin-right: 15px;
 }
 .answer span {
   width: 100%;
 }
-@media only screen and (max-width: 1024px) {
+
+/* @media only screen and (max-width: 1024px) {
   .answers {
     grid-auto-flow: unset;
     margin: 1rem 0;
   }
-}
+} */
 .answer span:nth-of-type(2) {
   text-align: right;
   color: #4e536f;
@@ -88,14 +90,15 @@
     width: calc(100vw - 60px);
     bottom: 10px;
   }
+  .progressBar .backButton {
+    width: 40px;
+    height: 40px;
+  }
+  .next span:first-child {
+    display: none;
+  }
 }
-.progressBar .backButton {
-  width: 40px;
-  height: 40px;
-}
-.next span:first-child {
-  display: none;
-}
+
 .rangeArea {
   width: 100%;
   position: relative;
