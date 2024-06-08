@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Icons+Outlined");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-
 :root {
   --bodyBackground: #f2f4f8;
   --successGreen: #00ff84;
@@ -20,11 +19,15 @@
 
 body {
   background-color: var(--bodyBackground);
+  /* background-color: #ffd3d3; */
 }
+
 a {
   text-decoration: none;
   color: blue;
+  font-weight: 200;
 }
+
 h4 {
   color: #7c83a7;
   font-weight: 600;
@@ -32,10 +35,12 @@ h4 {
   padding: 1px 0;
   margin-bottom: 10px;
 }
+
 .info {
   margin-top: 1rem;
   text-align: center;
 }
+
 .error {
   background-color: var(--dangerRed);
   padding: 0.6rem, 1.2rem;
@@ -44,6 +49,7 @@ h4 {
   display: flex;
   align-items: center;
 }
+
 .column {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -54,7 +60,19 @@ h4 {
     grid-template-columns: 1fr;
   }
 }
-/* nav component */
+
+/* Nav Bar component */
+.nav {
+  display: flex;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1;
+}
+
 .nav ul {
   width: 50%;
   height: 60%;
@@ -63,9 +81,11 @@ h4 {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav ul:first-child {
   margin-left: 30px;
 }
+
 .nav ul li {
   font-weight: 600;
 }
@@ -74,6 +94,7 @@ h4 {
   justify-content: center;
   align-items: center;
 }
+
 .nav .brand h3 {
   font-size: 18px;
   line-height: 19px;
@@ -81,21 +102,68 @@ h4 {
 }
 .nav .brand img {
   width: 32px;
+  height: 32px;
   margin-right: 10px;
+  border: 1px solid #95fd0d;
+  border-radius: 50%;
 }
+
 @media only screen and (max-width: 600px) {
   .nav .brand h3 {
     display: none;
   }
 }
+
+/* account component */
+.account {
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 12px;
+}
+
+.account > span:last-child {
+  cursor: pointer;
+}
+
+/* All pages common section  */
+
 /* layout component */
 .main {
-  width: 90%;
+  width: 100%;
   padding: 4rem 0;
 }
 .container {
   width: 90%;
   margin: 2rem auto;
+}
+
+.account {
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+  font-size: 12px;
+}
+
+.account > span:last-child {
+  cursor: pointer;
+}
+
+/* login component  */
+.login {
+  height: 330px;
+}
+/* Styles for Signup Component page Start Here */
+
+/* signup component */
+.signup {
+  height: 500px;
 }
 /* text input component */
 .textInput {
@@ -114,7 +182,7 @@ h4 {
   outline: none;
   height: 100%;
   width: 100%;
-  padding: 0.3rem, 0.7rem;
+  padding: 0.3rem 0.7rem;
   background-color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -124,8 +192,45 @@ h4 {
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   cursor: pointer;
+}
+
+/* illustration component */
+.illustration {
+  padding: 5rem 2rem;
+}
+
+.illustration img {
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 1023px) {
+  .illustration {
+    display: none;
+  }
+}
+
+/* form component */
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem 0;
+}
+
+.form label {
+  margin-top: 1rem;
+}
+
+.form button {
+  height: 44px;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
 }
 /* button component */
 .button {
@@ -139,65 +244,17 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border: 0;
   border-radius: 8px;
   cursor: pointer;
-  border: 0px;
 }
+
 .button:hover {
-  background: var(--fontPrimary);
-  color: #f2f4f8;
+  background-color: var(--fontPrimary);
+  color: #fff;
 }
-/* account component */
-.account {
-  width: 50%;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 30px;
-  font-size: 12px;
-}
-.account > span:last-child {
-  cursor: pointer;
+.button:hover span {
+  color: #fff;
 }
 
-/* signup component */
-.signup {
-  height: 500px;
-}
-/* login component  */
-.login {
-  height: 330px;
-}
-/* illustration component */
-.illustration {
-  padding: 5rem 2rem;
-}
-
-.illustration img {
-  max-width: 80%;
-}
-@media only screen and (max-width: 1023px) {
-  .illustration {
-    display: none;
-  }
-}
-/* form component */
-.form {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 2rem 0;
-}
-.form label {
-  margin-top: 1rem;
-}
-
-.form button {
-  height: 44px;
-  margin-top: 2rem;
-}
-@media only screen and (max-width: 600px) {
-  .form {
-    grid-template-columns: 1fr;
-  }
-}
+/* Styles for Signup Component page End Here */

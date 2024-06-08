@@ -2,66 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og.title" content="React quize by Fazle Hasan" />
-    <meta property="og.description" content="React quize by Fazle Hasan" />
+    <meta property="og:title" content="React quize by Fazle Hasan" />
+    <meta property="og:description" content="React quize by Fazle Hasan" />
+
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/quiz.css" />
-    <title>Home - Fazle Hasan</title>
+
+    <title>Login-FS Digital</title>
   </head>
   <body>
-    <!-- Navbar start Hear -->
+    <!-- Nav Bar section start here -->
     <nav class="nav">
+      <!-- Fs Digital logo  -->
       <ul>
         <li>
-          <a href="index.html" class="brand">
-            <img src="./images/logo-bg.png" alt="Fazle Hasan Logo" />
-            <h3>Fazle Hasan</h3>
+          <a href="./index.html" class="brand">
+            <img src="./images/logo-fs.jpg" alt="Fs_Digital" />
+            <h3>Fs Digital</h3>
           </a>
         </li>
       </ul>
+      <!-- Signup side  -->
       <div class="account">
-        <span class="material-incons-outlined"> account_circle </span>
-        <a href="signup.html">Signup</a>
+        <span class="material-icons-outlined">account_circle</span>
+        <a href="./signup.html"> Signup </a>
       </div>
     </nav>
-    <!-- Navbar end Hear -->
+    <!-- Nav Bar section End here -->
 
+    <!-- Main section Start here  -->
     <main class="main">
-        <div class="container">
-            <!-- Login Account start Hear  -->
-        <h1> Login to your account </h1>
+      <div class="container">
+        <h1>Login to your account</h1>
+
+        <!-- Login Account start Hear  -->
         <div class="column">
-            <div class="illustration">
-            <img src="./images/login.svg" alt="Login">
-        </div><!-- Login Account end Hear  -->
-        <form class="login form" action="#">
-            <!-- Enter email start here  -->
+          <!-- illustration Svg  -->
+          <div class="illustration">
+            <img src="./images/login.svg" alt="Login" />
+          </div>
+          <!-- Form section  -->
+          <form action="#" class="login form">
+            <!-- Email  -->
             <div class="textInput">
-                <input type="text" placeholder="Enter email">
-                <span class="material_icons-outlined">alternate_email</span>
-            </div><!-- Enter email end here  -->
-
-            <!-- Enter Password start here  -->
-            <div class="textInput">
-                <input type="password" placeholder="Enter Password">
-                <span class="material-icons-outlined"> lock </span>
+              <input type="email" placeholder="Enter email" />
+              <span class="material-icons-outlined"> alternate_email </span>
             </div>
-            <!-- Enter Password end here  -->
-            <!-- Button start here  -->
+            <!-- password  -->
+            <div class="textInput">
+              <input type="password" placeholder="Enter email" />
+              <span class="material-icons-outlined"> lock </span>
+            </div>
+            <!-- button  -->
             <button class="button">
-                <span>Submit Now</span>
+              <span>Submit now</span>
             </button>
-            <!-- Button end here  -->
-            <!-- Signup start here  -->
-            <div class="info">Don't have an account?
-                 <a href="signup.html">Signup</a> instead.</div>
-            <!-- Signup end here  -->
-        
-            <script src="./scripts/script.js"></script>    
-        </form>
-
+            <!-- Account signup  -->
+            <div class="info">
+              Don't have an account? <a href="signup.html">Signup </a> instead.
+            </div>
+          </form>
+        </div>
+        <!-- Login Account end Hear  -->
+      </div>
     </main>
-    
+    <!-- Main section  end here  -->
   </body>
 </html>

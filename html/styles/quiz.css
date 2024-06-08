@@ -1,4 +1,4 @@
-.answer {
+.answers {
   display: grid;
   grid-template-rows: repeat(5, auto);
   gap: 10px;
@@ -33,17 +33,12 @@
   width: 100%;
 }
 
-/* @media only screen and (max-width: 1024px) {
-  .answers {
-    grid-auto-flow: unset;
-    margin: 1rem 0;
-  }
-} */
 .answer span:nth-of-type(2) {
   text-align: right;
   color: #4e536f;
   font-size: 14px;
 }
+
 .correct {
   background: var(--successGreen) !important;
   font-weight: 600;
@@ -53,6 +48,7 @@
   background: var(--dangerRed) !important;
   font-weight: 600;
 }
+
 /* progress bar component */
 .progressBar {
   width: calc(100vw - 100px);
@@ -71,11 +67,12 @@
   grid-template-columns: 50px 1fr auto;
   gap: 20px;
 }
+
 .progressBar .backButton {
   width: 50px;
   height: 50px;
   border-radius: 8px;
-  margin-left: 10px;
+  margin-top: 10px;
   background: #47f59010;
   display: flex;
   justify-content: center;
@@ -85,6 +82,7 @@
 .progressBar .backButton:hover {
   background: #47f5953a;
 }
+
 @media only screen and (max-width: 1024px) {
   .progressBar {
     width: calc(100vw - 60px);
@@ -94,6 +92,7 @@
     width: 40px;
     height: 40px;
   }
+
   .next span:first-child {
     display: none;
   }
@@ -104,15 +103,17 @@
   position: relative;
   margin: 0 auto;
 }
+
 .rangeBody {
   width: 100%;
-  width: 4px;
+  height: 4px;
   margin: 0 auto;
-  background: #e5e5e5;
+  background: #e4e8ee;
   border: none;
   outline: none;
   border-radius: 20px;
 }
+
 .progress {
   height: 4px;
   background: var(--fontPrimary);
@@ -120,6 +121,7 @@
   position: relative;
   transition: width 0.3s ease;
 }
+
 .progress::after {
   content: "";
   height: 12px;
@@ -128,11 +130,12 @@
   right: 0;
   border-radius: 100%;
   background-color: var(--fontPrimary);
-  transform: translate(-50%);
+  transform: translateY(-50%);
   top: 50%;
   cursor: pointer;
 }
-.tooptip {
+
+.tooltip {
   position: absolute;
   top: -70px;
   left: calc(70% - 65px);
@@ -145,6 +148,7 @@
   font-weight: 600;
   display: none;
 }
+
 .tooltip::after {
   content: "";
   width: 15px;
@@ -168,15 +172,18 @@
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 5px;
 }
+
 .miniPlayer img {
   width: 300px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   animation: miniplayerAnim 0.3s ease forwards;
 }
+
 .open {
   display: none;
 }
+
 .close {
   display: block;
   position: absolute;
@@ -191,12 +198,14 @@
   line-height: 20px;
   padding: 5px 0 0 3px;
 }
+
 .close:hover {
   color: #666666;
   cursor: pointer;
   outline: 0;
 }
-@keyframes miniPlayerAnim {
+
+@keyframes miniplayerAnim {
   from {
     transform: scale(0);
   }
@@ -204,20 +213,15 @@
     transform: scale(1);
   }
 }
-.miniPlayer p {
-  font-weight: 500;
-  font-size: 14px;
-  margin: 10px 0;
-  color: var(--fontPrimary);
-}
 
 @media only screen and (max-width: 1536px) {
   .miniPlayer {
     transition: transform 0.3s ease;
   }
 }
+
 .floatingBtn {
-  width: 0px;
+  width: 60px;
   height: 60px;
   bottom: 80px;
   right: 10px;
@@ -231,23 +235,29 @@
   cursor: pointer;
   user-select: none;
 }
+
 .floatingBtn:hover {
   background-color: var(--successGreen);
 }
+
 .floatingBtn:hover span {
   color: var(--fontPrimary);
 }
+
 .floatingBtn p {
   display: none;
 }
+
 .floatingBtn img {
   transform: scale(0);
   display: none;
 }
+
 .floatingBtn span {
   color: var(--successGreen);
   font-weight: 500;
 }
+
 .floatingBtn .open {
   display: block;
 }
