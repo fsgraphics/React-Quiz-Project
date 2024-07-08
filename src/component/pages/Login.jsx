@@ -1,10 +1,10 @@
 import React from "react";
 import loginupImage from "../assets/images/login.svg";
+import Button from "../Button";
 import classes from "../component/styles/Login.module.css";
-import Button from "./Button";
-import Form from "./Form";
-import Illustration from "./Illustration";
-import TextInput from "./TextInput";
+import Form from "../Form";
+import Illustration from "../Illustration";
+import TextInput from "../TextInput";
 
 const Login = () => {
   return (
