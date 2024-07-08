@@ -1,9 +1,9 @@
 import React from "react";
-import loginupImage from "../assets/images/login.svg";
+import loginImage from "../../assets/images/login.svg";
 import Button from "../Button";
-import classes from "../component/styles/Login.module.css";
 import Form from "../Form";
 import Illustration from "../Illustration";
+import classes from "../styles/Login.module.css";
 import TextInput from "../TextInput";
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
       <h1>Login to your account</h1>
       <div class="column">
         <Illustration>
-          <img src={loginupImage} alt="Login" />
+          <img src={loginImage} alt="Login" />
         </Illustration>
         <Form className={`${classes.login} ${classes.form}`}>
           <TextInput
