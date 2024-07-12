@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import image2 from "../assets/images/2eye.jpg";
 import image3 from "../assets/images/3.jpg";
 import image4 from "../assets/images/Abstract-F-Jpg.jpg";
@@ -14,36 +15,56 @@ import Video from "./Video";
 const Videos = () => {
   return (
     <div className={classes.videos}>
-      <Video>
-        <img src={image1} alt="City" />
-      </Video>
-      <Video>
-        <img src={image2} alt="City" />
-      </Video>
-      <Video>
-        <img src={image3} alt="City" />
-      </Video>
-      <Video>
-        <img src={image4} alt="City" />
-      </Video>
-      <Video>
-        <img src={image5} alt="City" />
-      </Video>
-      <Video>
-        <img src={image6} alt="City" />
-      </Video>
-      <Video>
-        <img src={image7} alt="City" />
-      </Video>
-      <Video>
-        <img src={image8} alt="City" />
-      </Video>
-      <Video>
-        <img src={image9} alt="City" />
-      </Video>
-      <Video>
-        <img src={image10} alt="City" />
-      </Video>
+      <Link to="/quiz">
+        <Video>
+          <img src={image1} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image2} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image3} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image4} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image5} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image6} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image7} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image8} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image9} alt="City" />
+        </Video>
+      </Link>
+      <Link to="/quiz">
+        <Video>
+          <img src={image10} alt="City" />
+        </Video>
+      </Link>
     </div>
   );
 };
