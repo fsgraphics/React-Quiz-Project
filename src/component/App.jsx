@@ -7,7 +7,9 @@ import Login from "./pages/Login";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 import Signup from "./pages/Signup";
-import PrivateRoue from "./PrivateRoue";
+// import PrivateRoue from "./PrivateRoue";
+import PrivateOutlet from "./PrivateOutlet";
+import PublicOutlet from "./PublicOutlet";
 
 const App = () => {
   return (
@@ -16,9 +18,18 @@ const App = () => {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route
+
+            <Route path="/*" element={<PublicOutlet />}>
+              <Route path="signup" element={<Signup />} />
+              <Route path="login" element={<Login />} />
+            </Route>
+
+            <Route path="/*" element={<PrivateOutlet />}>
+              <Route path="quiz" element={<Quiz />} />
+              <Route path="result" element={<Result />} />
+            </Route>
+
+            {/* <Route
               path="/quiz"
               element={
                 <PrivateRoue>
@@ -33,7 +44,7 @@ const App = () => {
                   <Result />
                 </PrivateRoue>
               }
-            />
+            /> */}
           </Routes>
         </Layout>
       </AuthProvider>
