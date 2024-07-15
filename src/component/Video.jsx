@@ -1,4 +1,5 @@
 import classes from "./styles/Video.module.css";
+// eslint-disable-next-line react/prop-types
 const Video = ({ title, id, noq }) => {
   return (
     <div className={classes.video}>
