@@ -42,11 +42,15 @@ const useVideoList = (page) => {
         }
       } catch (err) {
         console.log(err);
+        setLoading(false);
+        setError(true);
       }
     }
 
-    fetchVideos();
-  }, []);
+    setTimeout(() => {
+      fetchVideos();
+    }, 2000);
+  }, [page]);
 
   return {
     loading,
